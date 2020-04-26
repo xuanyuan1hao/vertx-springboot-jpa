@@ -53,7 +53,7 @@ public class BookAsyncServiceImpl implements BookAsyncService {
   public void getAll(Handler<AsyncResult<List<Book>>> resultHandler) {
     System.out.print("BookAsyncServiceImpl.getAll \n");
     List<Book> all = bookService.getAll();
-    System.out.print("books.size = "+((ArrayList<Book>) all).size());
+    System.out.println("books.size = "+((ArrayList<Book>) all).size());
     Future.succeededFuture(all).setHandler(resultHandler);
   }
 }
